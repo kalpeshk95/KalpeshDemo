@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_watchlist"
+        android:icon="@drawable/ic_watchlist"
+        android:title="@string/string_watchlist" />
+    <item
+        android:id="@+id/nav_orders"
+        android:icon="@drawable/ic_order"
+        android:title="@string/string_orders" />
+    <item
+        android:id="@+id/nav_portfolio"
+        android:icon="@drawable/ic_portfolio"
+        android:title="@string/string_portfolio" />
+    <item
+        android:id="@+id/nav_funds"
+        android:icon="@drawable/ic_funds"
+        android:title="@string/string_funds" />
+    <item
+        android:id="@+id/nav_invest"
+        android:icon="@drawable/ic_invest"
+        android:title="@string/string_invest" />
+</menu>

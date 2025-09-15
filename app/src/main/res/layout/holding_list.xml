@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ASHOKLEY" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtLtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_ltp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            app:layout_constraintBottom_toBottomOf="@+id/lblSymbol"
+            app:layout_constraintEnd_toStartOf="@+id/lblLtp"
+            app:layout_constraintTop_toTopOf="@+id/lblSymbol" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblLtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintBottom_toBottomOf="@+id/lblSymbol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lblSymbol"
+            tools:text="\u20B9 119.10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtNetQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/string_net_qty"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblSymbol" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblNetQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNetQty"
+            app:layout_constraintStart_toEndOf="@+id/txtNetQty"
+            app:layout_constraintTop_toTopOf="@+id/txtNetQty"
+            tools:text="3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPnL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_p_amp_l"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNetQty"
+            app:layout_constraintEnd_toStartOf="@+id/lblPnL"
+            app:layout_constraintTop_toTopOf="@+id/txtNetQty" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblPnL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNetQty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtNetQty"
+            tools:text="\u20B9 12.90" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@+id/lblPnL" />
+
+</LinearLayout>

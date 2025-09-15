@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rect_top_border_radius"
+    android:padding="8dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCurrentVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@string/string_current_value"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblCurrentVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCurrentVal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtCurrentVal"
+        tools:text="\u20B9 27,893.65" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTotalInv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@string/string_total_investment"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCurrentVal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblTotalInv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTotalInv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtTotalInv"
+        tools:text="\u20B9 27,893.65" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTodayPnL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@string/string_today_s_pnl"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalInv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblTodayPnL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTodayPnL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtTodayPnL"
+        tools:text="\u20B9 27,893.65" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginHorizontal="8dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@+id/txtTodayPnL" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/infoGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="divider, lblTodayPnL,txtTodayPnL, lblTotalInv, txtTotalInv, lblCurrentVal, txtCurrentVal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtProfitLoss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@string/string_profit_loss"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:drawableRightCompat="@drawable/ic_arrow_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblProfitLoss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintBottom_toBottomOf="@+id/txtProfitLoss"
+        app:layout_constraintEnd_toStartOf="@+id/lblProfitLossPer"
+        app:layout_constraintTop_toTopOf="@+id/txtProfitLoss"
+        tools:text="\u20B9 697.06" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblProfitLossPer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:paddingEnd="8dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintBottom_toBottomOf="@+id/lblProfitLoss"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="RtlSymmetry"
+        tools:text="(2.44%)" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

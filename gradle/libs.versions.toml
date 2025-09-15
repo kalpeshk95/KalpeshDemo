@@ -1,0 +1,87 @@
+[versions]
+agp = "8.13.0"
+kotlin = "2.2.20"  # Updated to be compatible with AGP 8.1.1
+coreKtx = "1.17.0"
+activity = "1.11.0"
+constraintlayout = "2.2.1"
+appcompat = "1.7.1"
+kotlinxCoroutinesAndroid = "1.10.2"
+material = "1.13.0"
+lifeCycle = "2.9.3"
+
+# Network
+retrofit2 = "3.0.0"
+okhttp3 = "5.1.0"
+kotlinxSerializationJson = "1.9.0"
+retrofit2KotlinxSerializationConverter = "1.0.0"
+serialization = "2.2.20"  # Updated to match Kotlin version
+
+# Dependency Injection
+koin = "4.1.1"
+
+# Database
+room = "2.8.0"
+ksp = "2.2.20-2.0.3"
+swiperefreshlayout = "1.1.0"
+
+# Testing
+junit = "4.13.2"
+androidx-test-core = "1.7.0"
+androidx-arch-core-testing = "2.2.0"
+coroutines-test = "1.10.2"
+mockk = "1.14.5"
+turbine = "1.2.1"
+
+[libraries]
+# AndroidX Core
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+# Material Design
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+# Lifecycle
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifeCycle" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifeCycle" }
+
+# Network
+retrofit2-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+retrofit2-kotlinx-serialization-converter = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofit2KotlinxSerializationConverter" }
+
+okhttp3-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
+
+# Dependency Injection
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+
+# Room
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-core-testing = { group = "androidx.test", name = "core-ktx", version.ref = "androidx-test-core" }
+androidx-arch-core-testing = { group = "androidx.arch.core", name = "core-testing", version.ref = "androidx-arch-core-testing" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines-test" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
+
+[plugins]
+# Core plugins
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+# Serialization plugin
+kotlinx-serialization = { id = "kotlinx-serialization" }
+jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization" }
+
+# KSP
+devtools-ksp = { id = "com.google.devtools.ksp" }
+google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

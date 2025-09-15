@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="lbl_pos_amt">\u20B9 %,.2f</string>
+    <string name="lbl_neg_amt">- \u20B9 %,.2f</string>
+    <string name="lbl_percentage">(%1$.2f%%)</string>
+    <string name="string_ltp">LTP:\u0020</string>
+    <string name="string_net_qty">NET QTY:\u0020</string>
+    <string name="string_p_amp_l"><![CDATA[P&L:\u0020]]></string>
+    <string name="string_current_value">Current Value<sup>*</sup></string>
+    <string name="string_total_investment">Total Investment<sup>*</sup></string>
+    <string name="string_today_s_pnl"><![CDATA[Today\'s Profit & Loss]]><sup>*</sup></string>
+    <string name="string_profit_loss"><![CDATA[Profit & Loss]]><sup>*</sup></string>
+    <string name="string_orders">Orders</string>
+    <string name="string_watchlist">Watchlist</string>
+    <string name="string_invest">Invest</string>
+    <string name="string_funds">Funds</string>
+    <string name="string_portfolio">Portfolio</string>
+    <string name="string_retry">Retry</string>
+    <string name="string_no_internet">Please check your internet connection\nand try again</string>
+    <string name="string_coming_soon">Coming soon...</string>
+    <string name="offline_mode">Offline Mode: Showing cached data</string>
+</resources>
