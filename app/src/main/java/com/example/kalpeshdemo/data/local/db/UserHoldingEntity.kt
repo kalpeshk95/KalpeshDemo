@@ -20,14 +20,4 @@ data class UserHoldingEntity(
         ltp = ltp,
         close = close
     )
-
-    companion object {
-        fun fromUserHoldingItem(item: UserHoldingItem) = UserHoldingEntity(
-            symbol = item.symbol ?: "",
-            quantity = item.quantity ?: 0,
-            avgPrice = item.avgPrice ?: 0.0,
-            ltp = item.ltp ?: 0.0,
-            close = item.close ?: 0.0
-        )
-    }
 }

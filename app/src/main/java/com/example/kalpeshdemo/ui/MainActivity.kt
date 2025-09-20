@@ -63,7 +63,6 @@ class MainActivity : AppCompatActivity() {
         if (currentFragment?.javaClass != fragment.javaClass) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, fragment, itemId.toString())
-                .addToBackStack(null)
                 .commit()
         }
 

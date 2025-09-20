@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Assignment</string>
+    <string name="app_name">KalpeshDemo</string>
     <string name="lbl_pos_amt">\u20B9 %,.2f</string>
     <string name="lbl_neg_amt">- \u20B9 %,.2f</string>
     <string name="lbl_percentage">(%1$.2f%%)</string>

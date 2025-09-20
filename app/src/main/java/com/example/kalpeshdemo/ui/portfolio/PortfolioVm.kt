@@ -8,7 +8,6 @@ import com.example.kalpeshdemo.data.model.toHoldingData
 import com.example.kalpeshdemo.data.repository.NetworkRepository
 import com.example.kalpeshdemo.data.source.Resource
 import com.example.kalpeshdemo.utils.NetworkStatusHelper
-import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -57,15 +56,13 @@ class PortfolioVm(
                             }
 
                             is Resource.Success -> {
-                                resource.data?.let { updateUiState(it) } ?: handleError("No data available")
+                                resource.data?.let { updateUiState(it) }
+                                    ?: handleError("No data available")
                             }
 
                             is Resource.Error -> handleError()
                         }
                     }
-            } catch (e: CancellationException) {
-                // Coroutine was cancelled, no need to handle
-                throw e
             } catch (_: Exception) {
                 handleError()
             }
@@ -107,14 +104,14 @@ class PortfolioVm(
         )
     }
 
-    override fun onCleared() {
+    public override fun onCleared() {
         super.onCleared()
         networkStatusHelper.unregister()
     }
 }
 
-sealed class PortfolioUiState {
-    object Loading : PortfolioUiState()
+sealed interface PortfolioUiState {
+    object Loading : PortfolioUiState
     data class Success(
         val holdingList: List<HoldingData>,
         val currentVal: Double,
@@ -123,10 +120,10 @@ sealed class PortfolioUiState {
         val profitLoss: Double,
         val profitLossPercent: Double,
         val isOffline: Boolean = false
-    ) : PortfolioUiState()
+    ) : PortfolioUiState
 
     data class Error(
         val message: String,
         val isOffline: Boolean = false
-    ) : PortfolioUiState()
+    ) : PortfolioUiState
 }

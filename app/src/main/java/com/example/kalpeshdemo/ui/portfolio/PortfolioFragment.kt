@@ -188,7 +188,8 @@ class PortfolioFragment : Fragment(R.layout.fragment_portfolio) {
     }
 
     override fun onDestroy() {
-        super.onDestroy()
+        binding.rvHoldings.adapter = null
         _binding = null
+        super.onDestroyView()
     }
 }
